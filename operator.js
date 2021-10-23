@@ -1,6 +1,3 @@
-console.log(5 + 3);
-console.log(5 - 3);
-console.log(5 / 3);
-console.log(5 % 3);
-console.log(5 * 3);
-console.log(5 / 3);
+for (i = 0; i < 5; ++i) {
+    console.log("*");
+}
