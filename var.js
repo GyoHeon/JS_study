@@ -1,7 +1,9 @@
-let cost = 4000;
+let cost = 20;
 
-if (cost < 5000) {
-    console.log("Cheap");
-} else {
-    console.log("Expensive");
+while (cost < 25) {
+    console.log(`${cost}`);
+    cost++;
+}
+for (let i = 0; i < 5; i++) {
+    console.log(`${i}`);
 }
