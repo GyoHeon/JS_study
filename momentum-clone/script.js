@@ -1,4 +1,7 @@
-const amIFat = true;
-let amIThin;
-console.log(amIThin);
-console.log(amIFat);
+const week = [`mon`, `tue`, `wed`, `thu`, `fri`, `sat`];
+
+console.log(week[4]);
+
+week.push(`sun`);
+
+console.log(week);
