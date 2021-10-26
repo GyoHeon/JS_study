@@ -1,11 +1,9 @@
-const a = 1 === 2;
-const b = "AB" === "ABC";
-const c = false;
+const a = 1 < 2;
 
-console.log(a);
-console.log(b);
-console.log(c);
+if (a) {
+  console.log("참");
+} else {
+  console.log("거짓");
+}
 
-console.log("&& : ", a && b && c);
-console.log("|| : ", a || b || c);
-console.log("! : ", !a);
+console.log(a ? "참" : "거짓");
