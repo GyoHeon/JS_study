@@ -2,12 +2,16 @@ import random from "./getRandom.js";
 
 const a = random();
 
-if (a === 0) {
-  console.log("a is 0");
-} else if (a === 1) {
-  console.log("a is 1");
-} else if (a === 2) {
-  console.log("a is 2");
-} else {
-  console.log("rest...");
+switch (a) {
+  case 0:
+    console.log("a is 0");
+    break;
+  case 1:
+    console.log("a is 1");
+    break;
+  case 2:
+    console.log("a is 2");
+    break;
+  default:
+    console.log("rest...");
 }
