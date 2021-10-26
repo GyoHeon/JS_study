@@ -1,7 +1,3 @@
-function scope() {
-  if (true) {
-    const a = 123;
-    console.log(a);
-  }
+if (0) {
+  console.log(123);
 }
-scope();
