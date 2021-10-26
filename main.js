@@ -1,9 +1,13 @@
-const a = 1 < 2;
+import random from "./getRandom.js";
 
-if (a) {
-  console.log("참");
+const a = random();
+
+if (a === 0) {
+  console.log("a is 0");
+} else if (a === 1) {
+  console.log("a is 1");
+} else if (a === 2) {
+  console.log("a is 2");
 } else {
-  console.log("거짓");
+  console.log("rest...");
 }
-
-console.log(a ? "참" : "거짓");
