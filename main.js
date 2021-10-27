@@ -1,9 +1,8 @@
-const sum = function (x, y) {
-  console.log(arguments);
-  return arguments[0] + arguments[1];
+const double = function (x, y) {
+  return x * y;
 };
+console.log("double : ", double(7));
 
-const a = sum(1, 3);
-const b = sum(4, 12);
+const doubleArrow = (x) => ({ name: "Heropy" });
 
-console.log(sum(7, 3));
+console.log("doubleArrow", doubleArrow(7));
