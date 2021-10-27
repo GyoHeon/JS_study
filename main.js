@@ -1,8 +1,9 @@
-const double = function (x, y) {
-  return x * y;
-};
-console.log("double : ", double(7));
+const a = 7;
+function double() {
+  console.log(a * 2);
+}
+double();
 
-const doubleArrow = (x) => ({ name: "Heropy" });
-
-console.log("doubleArrow", doubleArrow(7));
+(function () {
+  console.log(a * 2);
+})();
