@@ -1,9 +1,9 @@
-function timeout(callback) {
-  setTimeout(() => {
-    console.log("Heropy!");
-    callback();
-  }, 1000);
-}
-timeout(() => {
-  console.log("Done!");
-});
+const timer = {
+  name: "Heropy!!",
+  timeout: function () {
+    setTimeout(() => {
+      console.log(this.name);
+    }, 2000);
+  },
+};
+timer.timeout();
