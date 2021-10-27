@@ -1,8 +1,9 @@
-const timer = setInterval(() => {
-  console.log("Heropy!");
-}, 2000);
-
-const h1El = document.querySelector("h1");
-h1El.addEventListener("click", () => {
-  clearInterval(timer);
+function timeout(callback) {
+  setTimeout(() => {
+    console.log("Heropy!");
+    callback();
+  }, 1000);
+}
+timeout(() => {
+  console.log("Done!");
 });
