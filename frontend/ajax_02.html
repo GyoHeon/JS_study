@@ -39,18 +39,20 @@
               let stationName = rows[i]["stationName"];
               let rackTotCnt = rows[i]["rackTotCnt"];
               let parkingTotCnt = rows[i]["parkingBikeTotCnt"];
+              let temp_html;
+
               if (parkingTotCnt < 5) {
                 temp_html = `<tr class='redtable'>
-            <td>${stationName}</td>
-            <td>${rackTotCnt}</td>
-            <td>${parkingTotCnt}</td>
-          </tr>`;
+                              <td>${stationName}</td>
+                              <td>${rackTotCnt}</td>
+                              <td>${parkingTotCnt}</td>
+                            </tr>`;
               } else {
                 temp_html = `<tr>
-            <td>${stationName}</td>
-            <td>${rackTotCnt}</td>
-            <td>${parkingTotCnt}</td>
-          </tr>`;
+                               <td>${stationName}</td>
+                               <td>${rackTotCnt}</td>
+                              <td>${parkingTotCnt}</td>
+                             </tr>`;
               }
               $("#names-q1").append(temp_html);
             }

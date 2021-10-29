@@ -28,6 +28,7 @@
             for (let i = 0; i < rows.length; i++) {
               let guName = rows[i]["MSRSTE_NM"];
               let guMise = rows[i]["IDEX_MVL"];
+              let temp_html;
 
               if (guMise > 60) {
                 temp_html = `<li id="redlist">${guName} : ${guMise}</li>`;
