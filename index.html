@@ -53,8 +53,28 @@
         align-items: flex-end;
         margin-bottom: 20px;
       }
+      #rate {
+        color: blue;
+        font-size: 18px;
+      }
     </style>
+    <script>
+      function rate(response) {
+        $.ajax({
+          type: "GET",
+          url: "http://spartacodingclub.shop/sparta_api/rate",
+          data: {},
+          success: function (response) {
+            let rate = response["rate"];
+            $("#rate").append(`달러-원 환율 : ${rate}`);
+          },
+        });
+      }
 
+      $(document).ready(function () {
+        rate();
+      });
+    </script>
     <title>스파르타코딩클럽 | 부트스트랩 연습하기</title>
   </head>
 
@@ -67,6 +87,10 @@
       <span>가격:5000억/척</span>
     </div>
     <p>이 배는 99일간의 항해동안 안전하게 당신을 호위해 줄 것입니다.</p>
+
+    <div>
+      <span id="rate"></span>
+    </div>
 
     <div class="input-group mb-3">
       <div class="input-group-prepend">
