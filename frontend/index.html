@@ -62,6 +62,41 @@
       }
     </style>
     <script>
+      $(document).ready(function () {
+        listing();
+      });
+
+      function listing(response) {
+        $("#cards-box").empty();
+        $.ajax({
+          type: "GET",
+          url: "http://spartacodingclub.shop/post",
+          data: {},
+          success: function (response) {
+            let row = response["articles"];
+            for (let i = 0; i < row.length; i++) {
+              let temp_html = `<div class="card">
+                <img
+                  class="card-img-top"
+                  src=${row[i]["image"]}
+                  alt="Card image cap"
+                />
+                <div class="card-body">
+                <a href="http://naver.com" class="card-title">
+                  ${row[i]["title"]}
+                </a>
+                <p class="card-text">
+                  ${row[i]["desc"]}
+                </p>
+              <p class="card-text comment">${row[i]["comment"]}</p>
+            </div>
+          </div>`;
+              $("#cards-box").append(temp_html);
+            }
+          },
+        });
+      }
+
       function openclose() {
         let status = $("#post-box").css("display");
         if (status == "block") {
