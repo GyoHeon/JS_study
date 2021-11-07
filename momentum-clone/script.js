@@ -1,7 +1,11 @@
-const week = [`mon`, `tue`, `wed`, `thu`, `fri`, `sat`];
+const player = {
+  name: "nico",
+  points: 10,
+  fat: true,
+};
 
-console.log(week[4]);
-
-week.push(`sun`);
-
-console.log(week);
+console.log(player);
+player.fat = false;
+console.log(player);
+player.lastName = "Lee";
+console.log(player);
