@@ -8,7 +8,10 @@ let toDos = [];
 
 function handleToDoSubmit(event) {
   event.preventDefault();
-  const newToDo = toDoInput.value;
+  const newToDo = {
+    text: toDoInput.value,
+    id: Date.now(),
+  };
   toDoInput.value = "";
   toDos.push(newToDo);
   paintToDo(newToDo);
@@ -16,13 +19,14 @@ function handleToDoSubmit(event) {
 }
 function paintToDo(newTodo) {
   const li = document.createElement("li");
+  li.id = newTodo.id;
   const span = document.createElement("span");
   li.appendChild(span);
   const button = document.createElement("button");
   button.innerText = "❌";
   button.addEventListener("click", deleteToDo);
   li.appendChild(button);
-  span.innerText = newTodo;
+  span.innerText = newTodo.text;
   toDoList.appendChild(li);
 }
 function deleteToDo(event) {
