@@ -1,7 +1,8 @@
-function calculateAvg(a, b) {
-    return (a + b) / 2;
-}
-let price1 = 1000;
-let price2 = 2000;
+const arr1 = [1, 2, 3, 4];
+const arr2 = [10, 11, 12, 13];
 
-console.log(`${calculateAvg(price1, price2)}`);
+const map1 = arr1.map(function (x, i) {
+  return x + arr2[i];
+});
+
+console.log(map1);
